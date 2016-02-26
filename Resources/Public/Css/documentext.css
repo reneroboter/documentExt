@@ -1,0 +1,100 @@
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+.margin-right {
+    margin-right: 5px ;
+}
+
+.pager > h2 {
+    float:left;
+    margin-top: 0;
+    width: 95%;
+}
+
+.pager  .glyphicon {
+    line-height: 3rem;
+    width: 2.5%;
+    cursor: pointer;
+}
+.last {
+    margin-top: 50px;
+}
+
+@media print {
+    [class*="col-sm-"] {
+        float: left;
+    }
+    ul > .nav,a,.btn,h1,.pager,.text-muted {
+        display: none;
+    }
+    .content {
+        width: 100%;
+        margin: 0; padding: 0;
+        background: none;
+    }
+    .col-md-8 {
+        padding: 10px;
+    }
+    .post {
+        page-break-after: always;
+    }
+    hr {
+        border-color: #ccc;
+    }
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#print {
+    width: 21cm;
+}
+
+.logo {
+    margin-top: 25px;
+}
+
+.section {
+    padding-bottom: 50px;
+}
+
+@media print {
+    .content {
+        /* min-height: 20.5cm; */
+    }
+
+}
+@page
+{
+    size: auto;   /* auto is the initial value */
+
+    /* this affects the margin in the printer settings */
+    margin-left: 7%;
+}
+footer {
+    position: absolute;
+}
+

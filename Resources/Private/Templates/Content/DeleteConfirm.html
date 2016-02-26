@@ -1,0 +1,13 @@
+<f:layout name="Default">
+    <f:section name="content">
+        <h1>Eintrag löschen ?</h1>
+        Möchtest du den Eintrag <strong>{content.title}</strong> wirklich löschen ?
+        <br><br>
+        <f:link.action action="list" class="btn btn-danger">
+            Nein!
+        </f:link.action>
+        <f:link.action action="delete" class="btn btn-success" arguments="{content:content}">
+            Ja, sofort!
+        </f:link.action>
+    </f:section>
+</f:layout>

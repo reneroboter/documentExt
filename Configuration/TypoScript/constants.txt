@@ -1,0 +1,15 @@
+
+plugin.tx_documentext_documentext {
+	view {
+		# cat=plugin.tx_documentext_documentext/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:documentext/Resources/Private/Templates/
+		# cat=plugin.tx_documentext_documentext/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:documentext/Resources/Private/Partials/
+		# cat=plugin.tx_documentext_documentext/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:documentext/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_documentext_documentext//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

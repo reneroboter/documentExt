@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-17T14:44:32Z" product-name="documentext">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="content.description">
+				<source>content</source>
+			</trans-unit>
+			<trans-unit id="workday_at.description">
+				<source>workdayAt</source>
+			</trans-unit>
+			<trans-unit id="created_at.description">
+				<source>createdAt</source>
+			</trans-unit>
+			<trans-unit id="updated_at.description">
+				<source>updatedAt</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

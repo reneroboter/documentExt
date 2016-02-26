@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-17T14:44:32Z" product-name="documentext">
+		<header/>
+		<body>
+			<trans-unit id="tx_documentext_domain_model_content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_documentext_domain_model_content.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_documentext_domain_model_content.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_documentext_domain_model_content.workday_at">
+				<source>Workday At</source>
+			</trans-unit>
+			<trans-unit id="tx_documentext_domain_model_content.created_at">
+				<source>Created At</source>
+			</trans-unit>
+			<trans-unit id="tx_documentext_domain_model_content.updated_at">
+				<source>Updated At</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
