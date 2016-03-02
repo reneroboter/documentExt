@@ -8,6 +8,7 @@ CREATE TABLE tx_documentext_domain_model_content (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	content text NOT NULL,
+	category int(11) DEFAULT '0' NOT NULL,
 	workday_at int(11) DEFAULT '0' NOT NULL,
 	created_at int(11) DEFAULT '0' NOT NULL,
 	updated_at int(11) DEFAULT '0' NOT NULL,

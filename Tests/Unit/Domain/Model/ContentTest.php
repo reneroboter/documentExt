@@ -104,6 +104,18 @@ class ContentTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
+	public function getCategoryReturnsInitialValueForInt()
+	{	}
+
+	/**
+	 * @test
+	 */
+	public function setCategoryForIntSetsCategory()
+	{	}
+
+	/**
+	 * @test
+	 */
 	public function getWorkdayAtReturnsInitialValueForDateTime()
 	{
 		$this->assertEquals(

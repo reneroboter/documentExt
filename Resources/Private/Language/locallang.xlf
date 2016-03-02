@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-02-17T14:44:32Z" product-name="documentext">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-02T15:45:54Z" product-name="documentext">
 		<header/>
 		<body>
 			<trans-unit id="tx_documentext_domain_model_content">
@@ -11,6 +11,9 @@
 			</trans-unit>
 			<trans-unit id="tx_documentext_domain_model_content.content">
 				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_documentext_domain_model_content.category">
+				<source>Category</source>
 			</trans-unit>
 			<trans-unit id="tx_documentext_domain_model_content.workday_at">
 				<source>Workday At</source>

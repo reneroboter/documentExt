@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'title,content,workday_at,created_at,updated_at,',
+		'searchFields' => 'title,content,category,workday_at,created_at,updated_at,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('documentext') . 'Resources/Public/Icons/tx_documentext_domain_model_content.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, content, workday_at, created_at, updated_at',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, content, category, workday_at, created_at, updated_at',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, content, workday_at, created_at, updated_at, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, content, category, workday_at, created_at, updated_at, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -133,6 +133,15 @@ return array(
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim'
+			)
+		),
+		'category' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:documentext/Resources/Private/Language/locallang_db.xlf:tx_documentext_domain_model_content.category',
+			'config' => array(
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'int'
 			)
 		),
 		'workday_at' => array(
