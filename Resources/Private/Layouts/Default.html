@@ -1,19 +1,18 @@
-<f:debug>{_all}</f:debug>
-<div class="container">
+<div class="container" xmlns:f="http://www.w3.org/1999/html">
     <div class="text-center">
         <h1>documentExt</h1>
-        <ul class="nav nav-pills">
-            <li class="active"><a href="#">Home</a></li>
-            <li>
-                <f:link.action action="addForm">Eintrag</f:link.action>
-            </li>
-            <li><a href="#">About</a></li>
-        </ul>
         <f:comment>
-        <ul class="nav nav-pills">
-            <f:cObject typoscriptObjectPath="lib.textmenu" />
-        </ul>
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#">Home</a></li>
+                <li>
+                    <f:link.action action="addForm">Eintrag</f:link.action>
+                </li>
+                <li><a href="#">About</a></li>
+            </ul>
         </f:comment>
+        <ul class="nav nav-pills">
+            <f:cObject typoscriptObjectPath="lib.textmenu"/>
+        </ul>
     </div>
     <div class="content">
         <f:render section="content"/>

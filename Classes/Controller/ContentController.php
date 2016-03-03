@@ -120,8 +120,11 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $date = new \DateTime();
         $content->setUpdatedAt($date);
 
+        $period['week'] = $content->getWorkdayAt()->format('W');
+        $period['year'] = $content->getWorkdayAt()->format('Y');
+
         $this->contentRepository->update($content);
-        $this->redirect('list');
+        $this->redirect('list', null, null, $period );
     }
 
     /**
