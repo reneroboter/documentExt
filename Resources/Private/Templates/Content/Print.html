@@ -1,3 +1,4 @@
+{namespace r=ReneRoboter\Documentext\ViewHelpers}
 <div class="container" id="print">
     <div class="section">
         <div class="row">
@@ -54,7 +55,7 @@
                             <f:for each="{work}" as="show">
                                 <p class="bodytext">
                                     <strong>
-                                        <f:format.date date="{show.workdayAt}" format="l"/>
+                                        <r:dateTranslate date="{show.workdayAt}" />
                                     </strong>
                                     <br/>
                                 </p>
@@ -86,7 +87,7 @@
                             <f:for each="{school}" as="show">
                                 <p class="bodytext">
                                     <strong>
-                                        <f:format.date date="{show.workdayAt}" format="l"/>
+                                        <r:dateTranslate date="{show.workdayAt}" />
                                     </strong>
                                     <br/>
                                 </p>

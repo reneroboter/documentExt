@@ -1,4 +1,5 @@
-<f:layout name="Default" xmlns:f="http://www.w3.org/1999/html"/>
+{namespace r=ReneRoboter\Documentext\ViewHelpers}
+<f:layout name="Default" xmlns:f="http://www.w3.org/1999/html" />
 
 <f:section name="content">
     <div class="clearfix pager">
@@ -30,7 +31,7 @@ Bitte benutze {content} als Content
 <f:section name="ListItem">
     <div class="col-md-8 col-md-offset-2 post">
         <h2>
-            <f:format.date date="{content.workdayAt}" format="l"/>
+            <r:dateTranslate date="{content.workdayAt}" />
         </h2>
         <hr>
         <span class="glyphicon glyphicon-time"></span>
