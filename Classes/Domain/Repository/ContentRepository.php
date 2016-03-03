@@ -5,7 +5,6 @@ use ReneRoboter\Documentext\Domain\Model\Content;
 use TYPO3\CMS\Extbase\Persistence\Generic\Query;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
-
 /***************************************************************
  *
  *  Copyright notice
@@ -60,53 +59,36 @@ class ContentRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $query->setOrderings(array('workdayAt' => QueryInterface::ORDER_ASCENDING));
         $query->matching($query->between('workdayAt', $start, $end));
         return $query->execute();
-
     }
-
+    
     /**
      * @param $start
      * @param $end
-     *
      * @return mixed
-     *
      */
     public function findBySchool($start, $end)
     {
         /** @var Query $query */
         $query = $this->createQuery();
         $query->setOrderings(array('workdayAt' => QueryInterface::ORDER_ASCENDING));
-        $query->matching(
-            $query->logicalAnd(
-                $query->between('workdayAt', $start, $end),
-                $query->equals('category', 1)
-            )
-        );
-
+        $query->matching($query->logicalAnd($query->between('workdayAt', $start, $end), $query->equals('category', 1)));
         return $query->execute();
     }
-
+    
     /**
      * @param $start
      * @param $end
-     *
      * @return mixed
-     *
      */
     public function findByWork($start, $end)
     {
         /** @var Query $query */
         $query = $this->createQuery();
         $query->setOrderings(array('workdayAt' => QueryInterface::ORDER_ASCENDING));
-        $query->matching(
-            $query->logicalAnd(
-                $query->between('workdayAt', $start, $end),
-                $query->equals('category', 0)
-            )
-        );
-
+        $query->matching($query->logicalAnd($query->between('workdayAt', $start, $end), $query->equals('category', 0)));
         return $query->execute();
     }
-
+    
     /**
      * @param Content $content
      * @return Content|null

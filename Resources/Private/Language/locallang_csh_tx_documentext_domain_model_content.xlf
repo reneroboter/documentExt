@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-02T15:45:54Z" product-name="documentext">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-03T10:37:42Z" product-name="documentext">
 		<header/>
 		<body>
 			<trans-unit id="title.description">
 				<source>title</source>
 			</trans-unit>
-			<trans-unit id="content.description">
-				<source>content</source>
+			<trans-unit id="description.description">
+				<source>description</source>
 			</trans-unit>
 			<trans-unit id="category.description">
 				<source>category</source>

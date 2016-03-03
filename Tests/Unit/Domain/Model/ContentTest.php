@@ -79,24 +79,24 @@ class ContentTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 	/**
 	 * @test
 	 */
-	public function getContentReturnsInitialValueForString()
+	public function getDescriptionReturnsInitialValueForString()
 	{
 		$this->assertSame(
 			'',
-			$this->subject->getContent()
+			$this->subject->getDescription()
 		);
 	}
 
 	/**
 	 * @test
 	 */
-	public function setContentForStringSetsContent()
+	public function setDescriptionForStringSetsDescription()
 	{
-		$this->subject->setContent('Conceived at T3CON10');
+		$this->subject->setDescription('Conceived at T3CON10');
 
 		$this->assertAttributeEquals(
 			'Conceived at T3CON10',
-			'content',
+			'description',
 			$this->subject
 		);
 	}

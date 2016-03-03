@@ -41,11 +41,18 @@ class Content extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $title = '';
     
     /**
-     * content
+     * description
      *
      * @var string
      */
-    protected $content = '';
+    protected $description = '';
+    
+    /**
+     * category
+     *
+     * @var int
+     */
+    protected $category = 0;
     
     /**
      * workdayAt
@@ -68,13 +75,6 @@ class Content extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var \DateTime
      */
     protected $updatedAt = null;
-    
-    /**
-     * category
-     *
-     * @var int
-     */
-    protected $category = 0;
     
     /**
      * Content constructor.
@@ -103,27 +103,6 @@ class Content extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTitle($title)
     {
         $this->title = $title;
-    }
-    
-    /**
-     * Returns the content
-     *
-     * @return string $content
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-    
-    /**
-     * Sets the content
-     *
-     * @param string $content
-     * @return void
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
     }
     
     /**
@@ -208,6 +187,27 @@ class Content extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setCategory($category)
     {
         $this->category = $category;
+    }
+    
+    /**
+     * Returns the description
+     *
+     * @return string description
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
+    /**
+     * Sets the description
+     *
+     * @param string $description
+     * @return void
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 
 }

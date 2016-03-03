@@ -19,14 +19,14 @@ return array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'title,content,category,workday_at,created_at,updated_at,',
+		'searchFields' => 'title,description,category,workday_at,created_at,updated_at,',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('documentext') . 'Resources/Public/Icons/tx_documentext_domain_model_content.gif'
 	),
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, content, category, workday_at, created_at, updated_at',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, category, workday_at, created_at, updated_at',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, content, category, workday_at, created_at, updated_at, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description, category, workday_at, created_at, updated_at, --div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access, starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -125,9 +125,9 @@ return array(
 				'eval' => 'trim'
 			),
 		),
-		'content' => array(
+		'description' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:documentext/Resources/Private/Language/locallang_db.xlf:tx_documentext_domain_model_content.content',
+			'label' => 'LLL:EXT:documentext/Resources/Private/Language/locallang_db.xlf:tx_documentext_domain_model_content.description',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
