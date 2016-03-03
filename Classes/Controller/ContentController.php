@@ -145,22 +145,19 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     {
         $date = new \DateTime();
         $date->setTimestamp($weekBeginning);
-        $date->modify('-1 day');
 
-        for ($i = 0; $i < 5; $i++) {
-            $date->modify('+1 day');
-            $week[$i] = $date->format('U');
-        }
+        $weekStart = $date->format('U');
+
+        $date->modify('+4 day');
+        $weekend = $date->format('U');
 
         $this->view->assignMultiple([
-            'monday'    => $this->contentRepository->findByWeekday($week[0]),
-            'tuesday'   => $this->contentRepository->findByWeekday($week[1]),
-            'wednesday' => $this->contentRepository->findByWeekday($week[2]),
-            'thursday'  => $this->contentRepository->findByWeekday($week[3]),
-            'friday'    => $this->contentRepository->findByWeekday($week[4]),
-            'week'      => $date->format('W'),
+            'school' => $this->contentRepository->findBySchool($weekStart, $weekend),
+            'work'   => $this->contentRepository->findByWork($weekStart, $weekend),
+            'weekNumber'   => $date->format('W'),
+            'weekStart'    => $weekStart,
+            'weekend'      => $weekend,
         ]);
-
     }
 
     /**

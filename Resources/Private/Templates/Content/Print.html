@@ -24,9 +24,11 @@
             </div>
             <div class="col-xs-6">
                 <p class="text-right">
-                    <strong>Kalenderwoche</strong> {week}<br/>
-                    <strong>vom</strong> <f:format.date date="{monday.0.workdayAt}" format="d.m.Y"/>
-                    <strong>bis</strong> <f:format.date date="{friday.0.workdayAt}" format="d.m.Y"/>
+                    <strong>Kalenderwoche</strong> {weekNumber}<br/>
+                    <strong>vom</strong>
+                    <f:format.date date="{weekStart}" format="d.m.Y"/>
+                    <strong>bis</strong>
+                    <f:format.date date="{weekend}" format="d.m.Y"/>
                 </p>
             </div>
             <div class="col-xs-12">
@@ -41,70 +43,62 @@
                 <div class="col-xs-12">
                     <h4>Betriebliche Tätigkeiten</h4>
                 </div>
+
                 <div class="col-xs-12">
                     <hr/>
                 </div>
 
                 <div class="col-xs-12">
-                    <p class="bodytext">
-                <span>
-                   <strong>Mittwoch</strong>
-                </span>
-                        <br/>
-                    </p>
-                    <f:format.raw>
-                        {wednesday.0.content}
-                    </f:format.raw>
-                    <p class="bodytext">
-                <span>
-                   <strong>Donnerstag</strong>
-                </span>
-                        <br/>
-                    </p>
-                    <f:format.raw>
-                        {thursday.0.content}
-                    </f:format.raw>
-                    <p class="bodytext">
-                <span>
-                   <strong>Freitag</strong>
-                </span>
-                        <br/>
-                    </p>
-                    <f:format.raw>
-                        {friday.0.content}
-                    </f:format.raw>
+                    <f:if condition="{work}">
+                        <f:then>
+                            <f:for each="{work}" as="show">
+                                <p class="bodytext">
+                                    <strong>
+                                        <f:format.date date="{show.workdayAt}" format="l"/>
+                                    </strong>
+                                    <br/>
+                                </p>
+                                <f:format.html>{show.content}</f:format.html>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            Für diese Woche liegen keine Einträge vor
+                        </f:else>
+                    </f:if>
                 </div>
-            </div>
 
+            </div>
         </div>
+
         <div class="section">
             <div class="row">
                 <div class="col-xs-12">
                     <h4>Berufssschule</h4>
                 </div>
+
                 <div class="col-xs-12">
                     <hr/>
                 </div>
+
                 <div class="col-xs-12">
-                    <p class="bodytext">
-                <span>
-                   <strong>Montag</strong>
-                </span>
-                        <br/>
-                    </p>
-                    <f:format.raw>
-                        {monday.0.content}
-                    </f:format.raw>
-                    <p class="bodytext">
-                <span>
-                   <strong>Dienstag</strong>
-                </span>
-                        <br/>
-                    </p>
-                    <f:format.raw>
-                        {tuesday.0.content}
-                    </f:format.raw>
+                    <f:if condition="{school}">
+                        <f:then>
+                            <f:for each="{school}" as="show">
+                                <p class="bodytext">
+                                    <strong>
+                                        <f:format.date date="{show.workdayAt}" format="l"/>
+                                    </strong>
+                                    <br/>
+                                </p>
+                                <f:format.html>{show.content}</f:format.html>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            Für diese Woche liegen keine Einträge vor
+                        </f:else>
+                    </f:if>
                 </div>
+
             </div>
         </div>
     </div>
@@ -134,15 +128,17 @@
     </div>
 </div>
 <script>
-    var certificate = prompt("Please enter your apprenticeship certificate number!");
-    if (certificate != null) {
-        document.getElementById("certificate").innerHTML = certificate;
-    }
+    /*
+     var certificate = prompt("Please enter your apprenticeship certificate number!");
+     if (certificate != null) {
+     document.getElementById("certificate").innerHTML = certificate;
+     }
 
-    var year = prompt("Please enter your apprenticeship year!");
-    if (year != null) {
-        document.getElementById("year").innerHTML = year;
-    }
+     var year = prompt("Please enter your apprenticeship year!");
+     if (year != null) {
+     document.getElementById("year").innerHTML = year;
+     }
 
-    window.print();
+     window.print();
+     /*
 </script>
