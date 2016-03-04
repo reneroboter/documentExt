@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-03T10:37:42Z" product-name="documentext">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-03-04T10:26:58Z" product-name="documentext">
 		<header/>
 		<body>
 			<trans-unit id="tx_documentext_domain_model_content">
 				<source>Content</source>
-			</trans-unit>
-			<trans-unit id="tx_documentext_domain_model_content.title">
-				<source>Title</source>
 			</trans-unit>
 			<trans-unit id="tx_documentext_domain_model_content.description">
 				<source>Description</source>

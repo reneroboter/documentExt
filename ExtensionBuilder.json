@@ -39,16 +39,6 @@
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
                             "propertyIsRequired": false,
-                            "propertyName": "title",
-                            "propertyType": "String",
-                            "uid": "1013721237310"
-                        },
-                        {
-                            "allowedFileTypes": "",
-                            "maxItems": "1",
-                            "propertyDescription": "",
-                            "propertyIsExcludeField": true,
-                            "propertyIsRequired": false,
                             "propertyName": "description",
                             "propertyType": "Text",
                             "uid": "1377908521249"
@@ -143,7 +133,7 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2016-03-03 10:37",
+        "last_modified": "2016-03-04 10:27",
         "extension_builder_version": "7.6.0",
         "be_user": " (51)"
     }

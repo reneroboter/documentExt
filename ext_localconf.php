@@ -7,10 +7,10 @@ if (!defined('TYPO3_MODE')) {
 	'ReneRoboter.' . $_EXTKEY,
 	'Documentext',
 	array(
-		'Content' => 'list,addForm,add,updateForm,update,deleteConfirm,delete,show,print' ,
+		'Content' => 'list,addForm,add,updateForm,update,deleteConfirm,delete,show,print',
 	),
 	// non-cacheable actions
 	array(
-		'Content' => 'list,addForm,add,updateForm,update,deleteConfirm,delete,show,print' ,
+		'Content' => 'list,addForm,add,updateForm,update,deleteConfirm,delete,show,print',
 	)
 );

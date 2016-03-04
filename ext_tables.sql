@@ -6,7 +6,6 @@ CREATE TABLE tx_documentext_domain_model_content (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
 
-	title varchar(255) DEFAULT '' NOT NULL,
 	description text NOT NULL,
 	category int(11) DEFAULT '0' NOT NULL,
 	workday_at int(11) DEFAULT '0' NOT NULL,

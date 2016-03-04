@@ -2,33 +2,32 @@
 <div class="row">
     <f:form action="{action}" object="{content}" name="content" additionalAttributes="{role:'form'}">
 
-    <div class="col-md-8">
-        <div class="form-group">
-            <label>Title</label>
-            <f:form.textfield property="title" class="form-control" />
-        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>Kategorie</label>
+                <f:form.select property="category" options="{0: 'Betriebliche Tätigkeit', 1: 'Berufsschule'}"
+                               class="form-control"/>
+            </div>
 
-        <div class="form-group">
-            <label>Category</label>
-            <f:form.select property="category" options="{0: 'Betriebliche Tätigkeit', 1: 'Berufsschule'}" class="form-control" />
-        </div>
+            <div class="form-group">
+                <label>Beschreibung</label>
+                <f:form.textarea property="description" class="form-control" rows="14"/>
+            </div>
 
-        <div class="form-group">
-            <label>Description</label>
-            <f:form.textarea property="description" class="form-control" rows="14"/>
+            <f:form.submit value="{submitmessage}" class="btn btn-primary"/>
         </div>
-
-        <f:form.submit value="{submitmessage}" class="btn btn-primary" />
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label>Datum</label>
-            <f:form.textfield property="workdayAt" value="{content.workdayAt->f:format.date(format: 'd.m.Y H:i')}" class="form-control" id="datetimepicker12"/>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Datum</label>
+                <f:form.textfield property="workdayAt" value="{content.workdayAt->f:format.date(format: 'd.m.Y H:i')}"
+                                  class="form-control" id="datetimepicker12"/>
+            </div>
+            <f:comment>
+                <div class="form-group">
+                    <label>Tag cloud</label>
+                    <f:form.textfield class="form-control" data="{role:'tagsinput'}"/>
+                </div>
+            </f:comment>
         </div>
-        <div class="form-group">
-            <label>Tag cloud</label>
-            <f:form.textfield  class="form-control" data="{role:'tagsinput'}" />
-        </div>
-    </div>
     </f:form>
 </div>

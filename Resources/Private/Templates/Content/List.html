@@ -35,9 +35,9 @@ Bitte benutze {content} als Content
         </h2>
         <hr>
         <span class="glyphicon glyphicon-time"></span>
-        Posted on
+        Veröffentlicht am
         <f:format.date date="{content.workdayAt}" format="M d, Y"/>
-        at
+        um
         <f:format.date date="{content.workdayAt}" format="h:i"/>
         PM
         <hr></hr>
@@ -46,10 +46,10 @@ Bitte benutze {content} als Content
         </div>
 
         <f:link.action action="show" arguments="{content:content}" class="btn btn-default">
-            <span class="glyphicon glyphicon-search"></span> Read More
+            <span class="glyphicon glyphicon-search"></span> Weiterlesen
         </f:link.action>
         <f:link.action action="print" arguments="{weekBeginning:weekBeginning}" class="btn btn-default">
-            <span class="glyphicon glyphicon-print"></span> Print Post
+            <span class="glyphicon glyphicon-print"></span> Drucken
         </f:link.action>
         <hr class="last">
     </div>
