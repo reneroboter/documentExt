@@ -3,7 +3,7 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>Blog Config</sheetTitle>
+                    <sheetTitle>DocumentExt - Config</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
@@ -20,7 +20,7 @@
                                     </numIndex>
                                     <numIndex index="2" type="array">
                                         <numIndex index="0">Add Formular</numIndex>
-                                        <numIndex index="1">Content->addForm</numIndex>
+                                        <numIndex index="1">Content->addForm;Content->add</numIndex>
                                     </numIndex>
                                 </items>
                             </config>
