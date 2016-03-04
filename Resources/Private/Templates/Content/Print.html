@@ -1,5 +1,5 @@
 {namespace r=ReneRoboter\Documentext\ViewHelpers}
-<div class="container" id="print">
+<div class="container" id="print" xmlns:f="http://www.w3.org/1999/html">
     <div class="section">
         <div class="row">
             <div class="col-xs-6">
@@ -103,33 +103,46 @@
             </div>
         </div>
     </div>
-
-    <div class="section">
+    <div class="section hidden-print">
         <div class="row">
             <div class="col-xs-6">
-                <p>
-                    <strong class="text-left">Datum</strong>
-                </p>
+                <div class="pull-let">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Auszubildender</strong>
+                </div>
             </div>
             <div class="col-xs-6">
-                <p>
-                    <strong class="text-right">Datum</strong>
-                </p>
-            </div>
-
-            <div class="col-xs-6">
-                <hr/>
-                <strong>Auszubildender</strong>
-            </div>
-            <div class="col-xs-6">
-                <hr/>
-                <strong>Ausbilder</strong>
+                <div class="pull-rigt">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Auszubildender</strong>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<footer class="footer visible-print">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="pull-let">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Auszubildender</strong>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="pull-rigt">
+                    <strong>Datum</strong>
+                    <hr/>
+                    <strong>Auszubildender</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 <script>
-    /*
      var certificate = prompt("Please enter your apprenticeship certificate number!");
      if (certificate != null) {
      document.getElementById("certificate").innerHTML = certificate;
@@ -141,5 +154,4 @@
      }
 
      window.print();
-     /*
 </script>
