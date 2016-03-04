@@ -10,45 +10,41 @@
                         <span class="glyphicon glyphicon-chevron-left pull-left"></span>
                     </f:link.action>
                 </f:if>
-            <h2 class="text-center">{content.title}</h2>
+                <h2 class="text-center">
+                    <f:format.date date="{content.workdayAt}" format="M d, Y"/>
+                </h2>
                 <f:if condition="{contentNext}">
                     <f:link.action action="show" arguments="{content:contentNext}">
                         <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                     </f:link.action>
                 </f:if>
-             </div>
-            <div class="visible-print">
-                <h3>{content.title}</h3>
             </div>
             <hr>
-            <span class="glyphicon glyphicon-time"></span>
-            Workday from
-            <b>
-            <f:format.date date="{content.workdayAt}" format="M d, Y" />
-            </b>
-            in the
-            <b>
-            <f:format.date date="{content.workdayAt}" format="W" />
-            </b>
-            week number
-            <f:comment>
-            at
-            <f:format.date date="{content.workdayAt}" format="h:i" />
-            PM
-            </f:comment>
+            <div>
+                <span class="glyphicon glyphicon-time"></span>
+                Gearbeitet am
+                <b>
+                    <f:format.date date="{content.workdayAt}" format="M d, Y"/>
+                </b>
+                in der
+                <b>
+                    <f:format.date date="{content.workdayAt}" format="W"/>
+                </b>
+                Kalenderwoche
+            </div>
             <hr>
-        <div>
-            <f:format.html>{content.description}</f:format.html>
+            <div>
+                <f:format.html>{content.description}</f:format.html>
+            </div>
+            <hr>
+            <f:link.action action="updateForm" arguments="{content:content}" class="btn btn-default">
+                <span class="glyphicon glyphicon-edit"></span> Update
+            </f:link.action>
+            <f:link.action action="deleteConfirm" arguments="{content:content}" class="btn btn-danger">
+                <span class="glyphicon glyphicon-trash"></span> Delete
+            </f:link.action>
+            <hr>
         </div>
-        <hr>
-        <f:link.action action="updateForm" arguments="{content:content}" class="btn btn-default">
-            <span class="glyphicon glyphicon-edit"></span> Update
-        </f:link.action>
-        <f:link.action action="deleteConfirm" arguments="{content:content}" class="btn btn-danger">
-            <span class="glyphicon glyphicon-trash"></span> Delete
-        </f:link.action>
-        <hr>
-    </div>
     </div>
 
 </f:section>
