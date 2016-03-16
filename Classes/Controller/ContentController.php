@@ -25,7 +25,9 @@ namespace ReneRoboter\Documentext\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+use Carbon\Carbon;
 use ReneRoboter\Documentext\Utility\DateUtility;
+use ReneRoboter\Documentext\Utility\HelloWorldUtility;
 
 /**
  * ContentController
@@ -40,7 +42,6 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @inject
      */
     protected $contentRepository;
-
 
     /**
      * @throws \TYPO3\CMS\Extbase\Mvc\Exception\NoSuchArgumentException
@@ -76,8 +77,8 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             'weekDate'   => $this->getWeekStartAndEnd($week, $year)
         ];
         $this->view->assign('date', $date);
-
-        $contents = $this->contentRepository->findByCalenderWeekEntries($date['weekDate']['start'], $date['weekDate']['end']);
+        $contents = $this->contentRepository->findByCalenderWeekEntries($date['weekDate']['start'],
+            $date['weekDate']['end']);
         $this->view->assign('contents', $contents);
 
     }
@@ -120,11 +121,13 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $date = new \DateTime();
         $content->setUpdatedAt($date);
 
-        $period['week'] = $content->getWorkdayAt()->format('W');
-        $period['year'] = $content->getWorkdayAt()->format('Y');
+        $period['week'] = $content->getWorkdayAt()
+            ->format('W');
+        $period['year'] = $content->getWorkdayAt()
+            ->format('Y');
 
         $this->contentRepository->update($content);
-        $this->redirect('list', null, null, $period );
+        $this->redirect('list', null, null, $period);
     }
 
     /**
@@ -155,11 +158,11 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $weekend = $date->format('U');
 
         $this->view->assignMultiple([
-            'school' => $this->contentRepository->findBySchool($weekStart, $weekend),
-            'work'   => $this->contentRepository->findByWork($weekStart, $weekend),
-            'weekNumber'   => $date->format('W'),
-            'weekStart'    => $weekStart,
-            'weekend'      => $weekend,
+            'school'     => $this->contentRepository->findBySchool($weekStart, $weekend),
+            'work'       => $this->contentRepository->findByWork($weekStart, $weekend),
+            'weekNumber' => $date->format('W'),
+            'weekStart'  => $weekStart,
+            'weekend'    => $weekend,
         ]);
     }
 
@@ -197,7 +200,7 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $date = new \DateTime();
         $result = [];
         $date->setISODate($year, $week);
-        $date->setTime(0,0);
+        $date->setTime(0, 0);
 
         $result['start'] = $date->format('U');
 

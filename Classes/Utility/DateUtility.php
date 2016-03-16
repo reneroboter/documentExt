@@ -1,6 +1,8 @@
 <?php
 
 namespace ReneRoboter\Documentext\Utility;
+// set for testing with phpunit
+date_default_timezone_set('UTC');
 
 class DateUtility
 {
