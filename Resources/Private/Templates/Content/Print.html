@@ -7,7 +7,7 @@
             </div>
             <div class="col-xs-6">
                 <p class="text-right">
-                    <strong>Ausbildungsjahr </strong> <span id="year"></span>
+                    <strong>Ausbildungsjahr </strong> {apprenticeshipYear}
                 </p>
                 <p class="text-right">
                     Fachinformatiker zur <br/>
@@ -20,7 +20,7 @@
             <div class="col-xs-6">
                 <p class="text-left">
                     <strong>René Backhaus</strong><br/>
-                    <strong>Ausbildungsnachweisnr.</strong> <span id="certificate"></span>
+                    <strong>Ausbildungsnachweisnr.</strong> {apprenticeshipNumber}
                 </p>
             </div>
             <div class="col-xs-6">
@@ -143,6 +143,10 @@
     </div>
 </footer>
 <script>
+    // Kann Besser gelöst werden ...
+    // Das Jahr kann einfach aus dem Datum genommen werden
+    // Und die Nr für den Ausbildungsnachweis kann auch einfach abgeleitet werden
+    /*
      var certificate = prompt("Bitte geben Sie die Nr für Ihren Ausbildungsnachweis ein!");
      if (certificate != null) {
      document.getElementById("certificate").innerHTML = certificate;
@@ -152,6 +156,6 @@
      if (year != null) {
      document.getElementById("year").innerHTML = year;
      }
-
+     /*
      window.print();
 </script>

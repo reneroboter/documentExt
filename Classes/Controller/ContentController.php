@@ -25,9 +25,7 @@ namespace ReneRoboter\Documentext\Controller;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
-use Carbon\Carbon;
 use ReneRoboter\Documentext\Utility\DateUtility;
-use ReneRoboter\Documentext\Utility\HelloWorldUtility;
 
 /**
  * ContentController
@@ -152,17 +150,23 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $date = new \DateTime();
         $date->setTimestamp($weekBeginning);
 
+        $weekNumber = $date->format('W');
         $weekStart = $date->format('U');
 
         $date->modify('+4 day');
         $weekend = $date->format('U');
 
+        DateUtility::normalizeApprenticeshipYear($date->format('Y'), $apprenticeshipYear);
+        DateUtility::normalizeApprenticeshipNumber($date->format('U'), $apprenticeshipNumber);
+
         $this->view->assignMultiple([
-            'school'     => $this->contentRepository->findBySchool($weekStart, $weekend),
-            'work'       => $this->contentRepository->findByWork($weekStart, $weekend),
-            'weekNumber' => $date->format('W'),
-            'weekStart'  => $weekStart,
-            'weekend'    => $weekend,
+            'school'               => $this->contentRepository->findBySchool($weekStart, $weekend),
+            'work'                 => $this->contentRepository->findByWork($weekStart, $weekend),
+            'weekNumber'           => $weekNumber,
+            'apprenticeshipNumber' => $apprenticeshipNumber,
+            'apprenticeshipYear'   => $apprenticeshipYear,
+            'weekStart'            => $weekStart,
+            'weekend'              => $weekend,
         ]);
     }
 
