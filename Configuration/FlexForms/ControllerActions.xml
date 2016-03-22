@@ -16,7 +16,7 @@
                                 <items type="array">
                                     <numIndex index="1" type="array">
                                         <numIndex index="0">Listenansicht</numIndex>
-                                        <numIndex index="1">Content->list</numIndex>
+                                        <numIndex index="1">Content->list;Content->addForm;Content->add;Content->updateForm;Content->update;Content->delete;Content->deleteConfirm;Content->show;Content->print</numIndex>
                                     </numIndex>
                                     <numIndex index="2" type="array">
                                         <numIndex index="0">Add Formular</numIndex>
